@@ -25,3 +25,7 @@ This project demonstrates a complete Physical Design (PD) flow for an **SPI-AES 
 
 ![GDSII Layout Preview](layout/spi.png)
 Figure 1: Final GDSII layout with 0 DRC/LVS errors".
+Tools: KLayout view of the final routed design using Librelane/OpenROAD flow.
+Status: Clean routing with zero DRC/LVS violations.
+Pin Placement: Optimized I/O pins for wbs_dat_o, wbs_dat_i, and wb_clk_i to minimize wire length and congestion.
+Core Density: High utilization with balanced cell placement and power grid distribution.
