@@ -1,0 +1,22 @@
+{
+    "DESIGN_NAME": "spi_wb_wrapper",
+    "PDK": "ihp-sg13g2",
+    "STD_CELL_LIBRARY": "sg13g2_stdcell",
+    "PDN_MULTILAYER": false,
+    "CLOCK_PORT": "wb_clk_i",
+    "CLOCK_PERIOD": 25,
+    "VERILOG_FILES": [
+        "dir::aes_wb_wrapper.v",
+        "dir::spi_wrapper.sv",
+        "dir::spi_reg.sv",
+        "dir::synchronizer.sv",
+        "dir::reclocking.sv",
+        "dir::falling_edge_detector.sv",
+        "dir::rising_edge_detector.sv"
+    ],
+    "FP_CORE_UTIL": 40,
+    "RT_MAX_LAYER": "Metal4",
+    "PNR_SDC_FILE": "dir::pnr.sdc",
+    "SIGNOFF_SDC_FILE": "dir::signoff.sdc"
+}
+
