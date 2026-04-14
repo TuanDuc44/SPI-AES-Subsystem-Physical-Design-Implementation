@@ -23,3 +23,5 @@ This project demonstrates a complete Physical Design (PD) flow for an **SPI-AES 
    ```bash
    librelane run config.json
 
+![GDSII Layout Preview](layout/spi.png)
+
