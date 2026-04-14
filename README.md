@@ -1,11 +1,11 @@
 # SPI-AES-Subsystem-Physical-Design-Implementation
 This project demonstrates a complete ASIC Back-end flow (Physical Design) for an integrated SPI-AES subsystem. Utilizing the Librelane framework and OpenROAD engine, the design was transformed from RTL Verilog into a sign-off-ready GDSII layout.
-2. Technical Specifications
+# Technical Specifications
 Process Design Kit (PDK): IHP 130nm / SkyWater 130nm (Open Source)
 EDA Tools: Librelane, OpenROAD, Magic (DRC), Netgen (LVS), KLayout
 Modules: SPI Wrapper, AES Core, Synchronizers, Edge Detectors, Wishbone Interface
 Physical Sign-off: Clean DRC/LVS verified
-3. Physical Design Highlights
+# Physical Design Highlights
 Design Constraints (SDC): Managed dual-stage timing constraints with pnr.sdc for implementation and signoff.sdc for final validation.
 Clock Domain Crossing (CDC) Management: Successfully implemented and closed timing for specialized modules (synchronizer.sv, reclocking.sv) to ensure metastable-free operation across clock domains.
 Floorplanning & Power Planning: Optimized core area and power distribution network (PDN) to meet target PPA (Power, Performance, Area).
