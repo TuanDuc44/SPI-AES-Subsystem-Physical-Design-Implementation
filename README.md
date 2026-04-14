@@ -24,4 +24,4 @@ This project demonstrates a complete Physical Design (PD) flow for an **SPI-AES 
    librelane run config.json
 
 ![GDSII Layout Preview](layout/spi.png)
-
+Figure 1: Final GDSII layout with 0 DRC/LVS errors".
