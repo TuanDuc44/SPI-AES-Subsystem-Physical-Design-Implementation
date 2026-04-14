@@ -1,13 +1,26 @@
 # SPI-AES-Subsystem-Physical-Design-Implementation
 This project demonstrates a complete ASIC Back-end flow (Physical Design) for an integrated SPI-AES subsystem. Utilizing the Librelane framework and OpenROAD engine, the design was transformed from RTL Verilog into a sign-off-ready GDSII layout.
-# Technical Specifications
-Process Design Kit (PDK): IHP 130nm / SkyWater 130nm (Open Source)
-EDA Tools: Librelane, OpenROAD, Magic (DRC), Netgen (LVS), KLayout
-Modules: SPI Wrapper, AES Core, Synchronizers, Edge Detectors, Wishbone Interface
-Physical Sign-off: Clean DRC/LVS verified
-# Physical Design Highlights
-Design Constraints (SDC): Managed dual-stage timing constraints with pnr.sdc for implementation and signoff.sdc for final validation.
-Clock Domain Crossing (CDC) Management: Successfully implemented and closed timing for specialized modules (synchronizer.sv, reclocking.sv) to ensure metastable-free operation across clock domains.
-Floorplanning & Power Planning: Optimized core area and power distribution network (PDN) to meet target PPA (Power, Performance, Area).
-Timing Closure: Achieved zero Setup and Hold violations by iteratively tuning placement and routing parameters within the OpenROAD engine.
-Physical Verification: Achieved 0 DRC/LVS errors, ensuring the layout matches the netlist and meets manufacturing rules.
+# SPI-AES Subsystem: RTL-to-GDSII Physical Design Flow
+
+## Overview
+This project demonstrates a complete Physical Design (PD) flow for an **SPI-AES Subsystem**. Using the **Librelane** framework and **OpenROAD** engine, the design was implemented from RTL netlist to a production-ready **GDSII** layout.
+
+## Key Technical Specifications
+- **PDK**: IHP 130nm / SkyWater 130nm.
+- **Tools**: Librelane, OpenROAD, Magic (DRC), Netgen (LVS).
+- **Core Modules**: SPI Wrapper, AES Core, Synchronizers, and Edge Detectors.
+
+## Physical Design Highlights
+- **Synthesis & Constraints**: Applied rigorous timing constraints using `pnr.sdc` to guide the placement and routing phases.
+- **Floorplanning**: Optimized core utilization and power grid (PDN) to ensure minimal IR-drop.
+- **Clock Tree Synthesis (CTS)**: Achieved balanced clock distribution for high-frequency synchronization modules (`synchronizer.sv`, `reclocking.sv`).
+- **Timing Sign-off**: Verified final timing convergence using `signoff.sdc` to ensure zero setup/hold violations.
+- **Physical Verification**: Successfully passed **DRC (Design Rule Check)** and **LVS (Layout Vs Schematic)** with zero errors.
+
+## How to Reproduce
+1. Install Librelane environment.
+2. Place the RTL files in the `design/` folder.
+3. Run the flow:
+   ```bash
+   librelane run config.json
+
